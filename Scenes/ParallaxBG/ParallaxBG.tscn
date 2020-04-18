@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Background/bg_3.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Background/bg_4.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Background/bg_2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Background/bg_1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Background/starstile20200417.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Background/backgroundskyground20200417.png" type="Texture" id=6]
+
+[node name="ParallaxBG" type="ParallaxBackground"]
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.1, 1 )
+
+[node name="sky" type="Sprite" parent="ParallaxLayer5"]
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( -3600, 0, 10000, 1000 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 6800, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( -3600, 0, 10400, 679.025 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 6800, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer2"]
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( -3600, 0, 10400, 713.178 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 6800, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer3"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -3600, 0, 10400, 701.327 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 6800, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer4"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -3600, 0, 10400, 699 )
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.1, 1 )
+
+[node name="stars" type="Sprite" parent="ParallaxLayer6"]
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( -3600, 0, 10000, 1000 )
