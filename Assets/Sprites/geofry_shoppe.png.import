@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pinky_Sheet.png-c3615482817e89bb140af19d296d8e78.stex"
+path="res://.import/geofry_shoppe.png-d596fb8e5f1a11b858f3bc0c299e207d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/pinky_Sheet.png"
-dest_files=[ "res://.import/pinky_Sheet.png-c3615482817e89bb140af19d296d8e78.stex" ]
+source_file="res://Assets/Sprites/geofry_shoppe.png"
+dest_files=[ "res://.import/geofry_shoppe.png-d596fb8e5f1a11b858f3bc0c299e207d.stex" ]
 
 [params]
 

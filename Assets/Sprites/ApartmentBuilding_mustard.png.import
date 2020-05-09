@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pinky_Sheet.png-c3615482817e89bb140af19d296d8e78.stex"
+path="res://.import/ApartmentBuilding_mustard.png-c98bc3fc7e8fe192cf779fd9773c4ead.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/pinky_Sheet.png"
-dest_files=[ "res://.import/pinky_Sheet.png-c3615482817e89bb140af19d296d8e78.stex" ]
+source_file="res://Assets/Sprites/ApartmentBuilding_mustard.png"
+dest_files=[ "res://.import/ApartmentBuilding_mustard.png-c98bc3fc7e8fe192cf779fd9773c4ead.stex" ]
 
 [params]
 

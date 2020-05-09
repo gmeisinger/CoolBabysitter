@@ -14,4 +14,4 @@
 [node name="Lights" type="Node" parent="."]
 
 [node name="GameCamera" parent="." instance=ExtResource( 2 )]
-position = Vector2( 0, 94 )
+position = Vector2( 0, 236 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pinky_Sheet.png-c3615482817e89bb140af19d296d8e78.stex"
+path="res://.import/glow2.png-ceb15bb25030e26a5e2e3e333e55c5b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/pinky_Sheet.png"
-dest_files=[ "res://.import/pinky_Sheet.png-c3615482817e89bb140af19d296d8e78.stex" ]
+source_file="res://Assets/Sprites/glow2.png"
+dest_files=[ "res://.import/glow2.png-ceb15bb25030e26a5e2e3e333e55c5b3.stex" ]
 
 [params]
 

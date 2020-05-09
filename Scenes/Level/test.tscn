@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Level/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level/Environment/Sidewalk.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/Sprites/RamenShop.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Sprites/ApartmentBuilding_1.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Sprites/ClubBuilding.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=8]
 
 [node name="test" instance=ExtResource( 1 )]
 
@@ -27,6 +28,9 @@ texture = ExtResource( 3 )
 [node name="Building4" type="Sprite" parent="Environment" index="4"]
 position = Vector2( 716, 144 )
 texture = ExtResource( 7 )
+
+[node name="Player" parent="Objects" index="0" instance=ExtResource( 8 )]
+position = Vector2( -141.256, 240.649 )
 
 [node name="StreetLamp" parent="Lights" index="0" instance=ExtResource( 4 )]
 position = Vector2( 210, 269 )
