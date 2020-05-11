@@ -13,5 +13,7 @@ func update(delta):
 		# $host.play('landing')
 		change_state("moving")
 		return
+	if not host.is_on_floor() and Input.is_action_just_pressed("move_up") or Input.is_action_just_pressed("move_down"):
+		host.grab_ladder()
 	host.process_horizontal_movement(delta)
 	host.process_move_and_slide(delta)

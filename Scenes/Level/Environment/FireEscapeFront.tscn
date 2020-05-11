@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Objects/Ladder.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Sprites/fire_escape_front.png" type="Texture" id=2]
+
+[sub_resource type="SegmentShape2D" id=1]
+b = Vector2( 60, 0 )
+
+[node name="FireEscapeFront" type="Node2D"]
+z_index = -1
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Ladder" parent="." instance=ExtResource( 1 )]
+position = Vector2( -4, 101 )
+
+[node name="Low" type="StaticBody2D" parent="."]
+position = Vector2( 0, 71 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Low"]
+position = Vector2( -26, 0 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="mid" type="StaticBody2D" parent="."]
+position = Vector2( 0, -19 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mid"]
+position = Vector2( -26, 0 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="mid2" type="StaticBody2D" parent="."]
+position = Vector2( 0, -109 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mid2"]
+position = Vector2( -26, 0 )
+shape = SubResource( 1 )
+one_way_collision = true

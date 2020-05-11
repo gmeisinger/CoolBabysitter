@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Assets/Sprites/bunny_sheet.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/StateMachine/stateMachine.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Player/States/state_falling.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Player/States/state_jumping.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Player/States/on_ladder.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Player/States/state_death.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/Player/States/state_hit.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/Player/States/state_death_fall.gd" type="Script" id=10]
@@ -128,6 +129,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=9]
 resource_name = "up_ladder_front"
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -143,6 +145,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=10]
 resource_name = "up_ladder_side"
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -154,6 +157,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 82, 83, 84, 85, 86, 87, 88, 89, 90, 91 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -208,6 +223,9 @@ tracks/0/keys = {
 radius = 7.53106
 height = 12.2985
 
+[sub_resource type="CapsuleShape2D" id=15]
+height = 9.90314
+
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 collision_mask = 5
@@ -218,9 +236,10 @@ position = Vector2( -0.0831566, -0.0831566 )
 texture = ExtResource( 1 )
 vframes = 12
 hframes = 10
-frame = 111
+frame = 73
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 12.1894 )
 shape = SubResource( 1 )
 
@@ -247,6 +266,9 @@ script = ExtResource( 9 )
 
 [node name="respawn" type="Node" parent="stateMachine"]
 script = ExtResource( 11 )
+
+[node name="on_ladder" type="Node" parent="stateMachine"]
+script = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle"
@@ -278,6 +300,17 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+visible = false
 position = Vector2( 0, 8.44785 )
 shape = SubResource( 14 )
+
+[node name="LadderDetector" type="Area2D" parent="."]
+monitorable = false
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderDetector"]
+visible = false
+position = Vector2( 0, 6 )
+shape = SubResource( 15 )
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Objects/Ladder.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Sprites/fire_escape_side.png" type="Texture" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 5, 22, 0, 0, 0, 0, 5, -59 )
+}
+
+[sub_resource type="SegmentShape2D" id=2]
+b = Vector2( 100, 0 )
+
+[node name="FireEscapeSide" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Ladder" parent="." instance=ExtResource( 1 )]
+position = Vector2( 47, 102 )
+side = true
+
+[node name="path" parent="Ladder" index="0"]
+position = Vector2( -1, -1 )
+curve = SubResource( 1 )
+
+[node name="Area2D" parent="Ladder" index="1"]
+position = Vector2( -3, 0 )
+z_index = -1
+
+[node name="Low" type="StaticBody2D" parent="."]
+position = Vector2( -19, 65 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Low"]
+position = Vector2( -26, 0 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="mid" type="StaticBody2D" parent="."]
+position = Vector2( -20, -24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mid"]
+position = Vector2( -26, 0 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="mid2" type="StaticBody2D" parent="."]
+position = Vector2( -20, -114 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mid2"]
+position = Vector2( -26, 0 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[editable path="Ladder"]

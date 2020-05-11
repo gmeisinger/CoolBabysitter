@@ -7,6 +7,9 @@ func update(delta):
 	elif !host.is_on_floor():
 		change_state("falling")
 		return
+	# Input
+	if Input.is_action_just_pressed("move_up") or Input.is_action_just_pressed("move_down"):
+		host.grab_ladder()
 	elif host.velocity == Vector2.ZERO:
 		host.play_anim("idle")
 	else:

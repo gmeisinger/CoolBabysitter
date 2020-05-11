@@ -9,4 +9,5 @@ limit_bottom = 394
 script = ExtResource( 1 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.00392157, 0.247059, 0.541176, 1 )

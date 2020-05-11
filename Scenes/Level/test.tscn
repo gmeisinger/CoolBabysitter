@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Level/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level/Environment/Sidewalk.tscn" type="PackedScene" id=2]
@@ -8,35 +8,66 @@
 [ext_resource path="res://Assets/Sprites/ApartmentBuilding_1.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Sprites/ClubBuilding.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Level/Environment/FireEscapeFront.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Level/Environment/FireEscapeSide.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Sprites/Japanese_Building.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Camera/GameCamera.tscn" type="PackedScene" id=12]
 
 [node name="test" instance=ExtResource( 1 )]
 
 [node name="Sidewalk" parent="Environment" index="0" instance=ExtResource( 2 )]
 
-[node name="Building" type="Sprite" parent="Environment" index="1"]
+[node name="Sidewalk2" parent="Environment" index="1" instance=ExtResource( 2 )]
+position = Vector2( 1400, 0.058075 )
+
+[node name="Building" type="Sprite" parent="Environment" index="2"]
 position = Vector2( 79, 216 )
 texture = ExtResource( 5 )
 
-[node name="Building2" type="Sprite" parent="Environment" index="2"]
+[node name="Building2" type="Sprite" parent="Environment" index="3"]
 position = Vector2( 365, 154 )
 texture = ExtResource( 6 )
 
-[node name="Building3" type="Sprite" parent="Environment" index="3"]
+[node name="Building3" type="Sprite" parent="Environment" index="4"]
 position = Vector2( -236, 162 )
 texture = ExtResource( 3 )
 
-[node name="Building4" type="Sprite" parent="Environment" index="4"]
+[node name="Building4" type="Sprite" parent="Environment" index="5"]
 position = Vector2( 716, 144 )
 texture = ExtResource( 7 )
+
+[node name="Building5" type="Sprite" parent="Environment" index="6"]
+position = Vector2( 1167, 135 )
+texture = ExtResource( 11 )
+
+[node name="FireEscapeFront" parent="Environment" index="7" instance=ExtResource( 9 )]
+position = Vector2( 966, 166 )
+
+[node name="FireEscapeSide" parent="Environment" index="8" instance=ExtResource( 10 )]
+position = Vector2( 1304.08, 165.559 )
 
 [node name="Player" parent="Objects" index="0" instance=ExtResource( 8 )]
 position = Vector2( -141.256, 240.649 )
 
+[node name="GameCamera" parent="Objects/Player" index="8" instance=ExtResource( 12 )]
+
 [node name="StreetLamp" parent="Lights" index="0" instance=ExtResource( 4 )]
-position = Vector2( 210, 269 )
+position = Vector2( 200, 269 )
 
 [node name="StreetLamp2" parent="Lights" index="1" instance=ExtResource( 4 )]
-position = Vector2( 521, 269 )
+position = Vector2( 500, 269 )
 
 [node name="StreetLamp3" parent="Lights" index="2" instance=ExtResource( 4 )]
-position = Vector2( -103, 269 )
+position = Vector2( -100, 269 )
+
+[node name="StreetLamp4" parent="Lights" index="3" instance=ExtResource( 4 )]
+position = Vector2( 800, 269 )
+
+[node name="StreetLamp5" parent="Lights" index="4" instance=ExtResource( 4 )]
+position = Vector2( 1100, 269 )
+
+[node name="StreetLamp6" parent="Lights" index="5" instance=ExtResource( 4 )]
+position = Vector2( 1400, 269 )
+
+[node name="GameCamera" parent="." index="4"]
+current = false
