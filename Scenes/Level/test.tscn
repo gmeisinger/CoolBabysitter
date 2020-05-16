@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/Level/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level/Environment/Sidewalk.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Scenes/Level/Environment/FireEscapeSide.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Sprites/Japanese_Building.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/Camera/GameCamera.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Sprites/pizzamore20200513.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Sprites/billboardbilding20200429.png" type="Texture" id=14]
 
 [node name="test" instance=ExtResource( 1 )]
 
@@ -40,10 +42,18 @@ texture = ExtResource( 7 )
 position = Vector2( 1167, 135 )
 texture = ExtResource( 11 )
 
-[node name="FireEscapeFront" parent="Environment" index="7" instance=ExtResource( 9 )]
+[node name="pizzamore20200513" type="Sprite" parent="Environment" index="7"]
+position = Vector2( -535.505, 172.187 )
+texture = ExtResource( 13 )
+
+[node name="billboardbilding20200429" type="Sprite" parent="Environment" index="8"]
+position = Vector2( 1537.63, 126.484 )
+texture = ExtResource( 14 )
+
+[node name="FireEscapeFront" parent="Environment" index="9" instance=ExtResource( 9 )]
 position = Vector2( 966, 166 )
 
-[node name="FireEscapeSide" parent="Environment" index="8" instance=ExtResource( 10 )]
+[node name="FireEscapeSide" parent="Environment" index="10" instance=ExtResource( 10 )]
 position = Vector2( 1304.08, 165.559 )
 
 [node name="Player" parent="Objects" index="0" instance=ExtResource( 8 )]
