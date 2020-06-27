@@ -1,19 +1,29 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/Level/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Level/Environment/Sidewalk.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Sprites/TattooParlor.png" type="Texture" id=3]
+[ext_resource path="res://Assets/buildings trash snacks/building005_20200413.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Objects/Lights/StreetLamp.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Sprites/RamenShop.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Sprites/ApartmentBuilding_1.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Sprites/ClubBuilding.png" type="Texture" id=7]
+[ext_resource path="res://Assets/buildings trash snacks/building003_20200409.png" type="Texture" id=5]
+[ext_resource path="res://Assets/buildings trash snacks/macandchees_20200411.png" type="Texture" id=6]
+[ext_resource path="res://Assets/buildings trash snacks/billboardbilding20200429.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Level/Environment/FireEscapeFront.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Level/Environment/FireEscapeSide.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Assets/Sprites/Japanese_Building.png" type="Texture" id=11]
+[ext_resource path="res://Assets/buildings trash snacks/club20200415.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/Camera/GameCamera.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Assets/Sprites/pizzamore20200513.png" type="Texture" id=13]
-[ext_resource path="res://Assets/Sprites/billboardbilding20200429.png" type="Texture" id=14]
+[ext_resource path="res://Assets/buildings trash snacks/musicshoppe20200429.png" type="Texture" id=13]
+[ext_resource path="res://Assets/buildings trash snacks/pizzamore20200513.png" type="Texture" id=14]
+[ext_resource path="res://Assets/buildings trash snacks/grocery20200417.png" type="Texture" id=15]
+[ext_resource path="res://Assets/buildings trash snacks/thelecafe20200420.png" type="Texture" id=16]
+[ext_resource path="res://Assets/buildings trash snacks/building002_20200408.png" type="Texture" id=17]
+[ext_resource path="res://Assets/buildings trash snacks/building001_20200413.png" type="Texture" id=18]
+[ext_resource path="res://Assets/buildings trash snacks/building002.3_20200408.png" type="Texture" id=19]
+[ext_resource path="res://Assets/buildings trash snacks/building002.2_20200408.png" type="Texture" id=20]
+[ext_resource path="res://Assets/buildings trash snacks/building004_20200409.png" type="Texture" id=21]
+[ext_resource path="res://Assets/buildings trash snacks/flowershop_20200410.png" type="Texture" id=22]
+[ext_resource path="res://Assets/buildings trash snacks/dumpsters202005.png" type="Texture" id=23]
+[ext_resource path="res://Assets/buildings trash snacks/snackmachine202005.png" type="Texture" id=24]
 
 [node name="test" instance=ExtResource( 1 )]
 
@@ -22,39 +32,159 @@
 [node name="Sidewalk2" parent="Environment" index="1" instance=ExtResource( 2 )]
 position = Vector2( 1400, 0.058075 )
 
-[node name="Building" type="Sprite" parent="Environment" index="2"]
-position = Vector2( 79, 216 )
-texture = ExtResource( 5 )
+[node name="building0023_20200408" type="Sprite" parent="Environment" index="2"]
+position = Vector2( -2125.62, 136.124 )
+texture = ExtResource( 19 )
 
-[node name="Building2" type="Sprite" parent="Environment" index="3"]
-position = Vector2( 365, 154 )
-texture = ExtResource( 6 )
+[node name="Building5" type="Sprite" parent="Environment" index="3"]
+position = Vector2( 1145.17, 135 )
+texture = ExtResource( 21 )
 
-[node name="Building3" type="Sprite" parent="Environment" index="4"]
-position = Vector2( -236, 162 )
-texture = ExtResource( 3 )
-
-[node name="Building4" type="Sprite" parent="Environment" index="5"]
-position = Vector2( 716, 144 )
-texture = ExtResource( 7 )
-
-[node name="Building5" type="Sprite" parent="Environment" index="6"]
-position = Vector2( 1167, 135 )
-texture = ExtResource( 11 )
-
-[node name="pizzamore20200513" type="Sprite" parent="Environment" index="7"]
-position = Vector2( -535.505, 172.187 )
-texture = ExtResource( 13 )
-
-[node name="billboardbilding20200429" type="Sprite" parent="Environment" index="8"]
-position = Vector2( 1537.63, 126.484 )
-texture = ExtResource( 14 )
-
-[node name="FireEscapeFront" parent="Environment" index="9" instance=ExtResource( 9 )]
+[node name="FireEscapeFront" parent="Environment" index="4" instance=ExtResource( 9 )]
 position = Vector2( 966, 166 )
 
-[node name="FireEscapeSide" parent="Environment" index="10" instance=ExtResource( 10 )]
+[node name="FireEscapeSide" parent="Environment" index="5" instance=ExtResource( 10 )]
 position = Vector2( 1304.08, 165.559 )
+
+[node name="musicshoppe20200429" type="Sprite" parent="Environment" index="6"]
+position = Vector2( 2522.34, 224.899 )
+texture = ExtResource( 13 )
+
+[node name="pizzamore20200513" type="Sprite" parent="Environment" index="7"]
+position = Vector2( 2843.07, 192.827 )
+texture = ExtResource( 14 )
+
+[node name="thelecafe20200420" type="Sprite" parent="Environment" index="8"]
+position = Vector2( 3238.63, 135.81 )
+texture = ExtResource( 16 )
+
+[node name="flowershop_20200410" type="Sprite" parent="Environment" index="9"]
+position = Vector2( 3664.71, 100.169 )
+texture = ExtResource( 22 )
+
+[node name="billboardbilding20200429" type="Sprite" parent="Environment" index="10"]
+position = Vector2( 2171.99, 126.187 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 320.153, 542.229 )
+
+[node name="building001_20200413" type="Sprite" parent="Environment" index="11"]
+position = Vector2( -387.933, 148.481 )
+texture = ExtResource( 18 )
+
+[node name="building0022_20200408" type="Sprite" parent="Environment" index="12"]
+position = Vector2( -1835.63, 135.959 )
+texture = ExtResource( 20 )
+
+[node name="building002_20200408" type="Sprite" parent="Environment" index="13"]
+position = Vector2( -2418.29, 141.616 )
+texture = ExtResource( 17 )
+
+[node name="building003_20200409" type="Sprite" parent="Environment" index="14"]
+position = Vector2( -913.404, 154.719 )
+texture = ExtResource( 5 )
+
+[node name="building005_20200413" type="Sprite" parent="Environment" index="15"]
+position = Vector2( -27.8207, 173.647 )
+texture = ExtResource( 3 )
+
+[node name="club20200415" type="Sprite" parent="Environment" index="16"]
+position = Vector2( 719.083, 115.749 )
+texture = ExtResource( 11 )
+
+[node name="macandchees_20200411" type="Sprite" parent="Environment" index="17"]
+position = Vector2( 317.094, 190.45 )
+texture = ExtResource( 6 )
+
+[node name="grocery20200417" type="Sprite" parent="Environment" index="18"]
+position = Vector2( 1646.46, 162.165 )
+texture = ExtResource( 15 )
+
+[node name="Obstacle" type="Node" parent="." index="2"]
+
+[node name="dumpsters202005" type="Sprite" parent="Obstacle" index="0"]
+position = Vector2( -207.501, 306.64 )
+texture = ExtResource( 23 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 75, 94 )
+
+[node name="dumpsters202006" type="Sprite" parent="Obstacle" index="1"]
+position = Vector2( -571.778, 319.025 )
+texture = ExtResource( 23 )
+region_enabled = true
+region_rect = Rect2( 89, 13, 82, 82 )
+
+[node name="dumpsters202007" type="Sprite" parent="Obstacle" index="2"]
+position = Vector2( 1967.16, 310.171 )
+texture = ExtResource( 23 )
+region_enabled = true
+region_rect = Rect2( 93, 101, 68, 83 )
+
+[node name="dumpsters202008" type="Sprite" parent="Obstacle" index="3"]
+position = Vector2( -1257.74, 327.342 )
+texture = ExtResource( 23 )
+region_enabled = true
+region_rect = Rect2( 89, 191, 82, 82 )
+
+[node name="dumpsters202009" type="Sprite" parent="Obstacle" index="4"]
+position = Vector2( 2348.37, 316.689 )
+texture = ExtResource( 23 )
+region_enabled = true
+region_rect = Rect2( 93, 279, 68, 83 )
+
+[node name="snackmachine202005" type="Sprite" parent="Obstacle" index="5"]
+position = Vector2( 117.345, 305.411 )
+texture = ExtResource( 24 )
+region_enabled = true
+region_rect = Rect2( 78, 0, 62, 100 )
+
+[node name="snackmachine202011" type="Sprite" parent="Obstacle" index="6"]
+position = Vector2( 3839.12, 321.94 )
+texture = ExtResource( 24 )
+region_enabled = true
+region_rect = Rect2( 147, 0, 62, 100 )
+
+[node name="snackmachine202012" type="Sprite" parent="Obstacle" index="7"]
+position = Vector2( 3915.76, 322.57 )
+texture = ExtResource( 24 )
+region_enabled = true
+region_rect = Rect2( 78, 0, 62, 100 )
+
+[node name="snackmachine202013" type="Sprite" parent="Obstacle" index="8"]
+position = Vector2( 3986.73, 321.94 )
+texture = ExtResource( 24 )
+region_enabled = true
+region_rect = Rect2( 213, 0, 62, 100 )
+
+[node name="snackmachine202006" type="Sprite" parent="Obstacle" index="9"]
+position = Vector2( 494.919, 300.916 )
+texture = ExtResource( 24 )
+region_enabled = true
+region_rect = Rect2( 7, 0, 62, 100 )
+
+[node name="snackmachine202007" type="Sprite" parent="Obstacle" index="10"]
+position = Vector2( 557.848, 342.869 )
+texture = ExtResource( 24 )
+region_enabled = true
+region_rect = Rect2( 293, 63, 28, 37 )
+
+[node name="snackmachine202008" type="Sprite" parent="Obstacle" index="11"]
+position = Vector2( 583.319, 348.862 )
+texture = ExtResource( 24 )
+region_enabled = true
+region_rect = Rect2( 409, 62, 31, 38 )
+
+[node name="snackmachine202009" type="Sprite" parent="Obstacle" index="12"]
+position = Vector2( 935.421, 338.374 )
+texture = ExtResource( 24 )
+region_enabled = true
+region_rect = Rect2( 409, 62, 31, 38 )
+
+[node name="snackmachine202010" type="Sprite" parent="Obstacle" index="13"]
+position = Vector2( 1347.46, 341.371 )
+texture = ExtResource( 24 )
+region_enabled = true
+region_rect = Rect2( 334, 73, 26, 27 )
 
 [node name="Player" parent="Objects" index="0" instance=ExtResource( 8 )]
 position = Vector2( -141.256, 240.649 )
@@ -74,10 +204,10 @@ position = Vector2( -100, 269 )
 position = Vector2( 800, 269 )
 
 [node name="StreetLamp5" parent="Lights" index="4" instance=ExtResource( 4 )]
-position = Vector2( 1100, 269 )
+position = Vector2( 1078.17, 269 )
 
 [node name="StreetLamp6" parent="Lights" index="5" instance=ExtResource( 4 )]
 position = Vector2( 1400, 269 )
 
-[node name="GameCamera" parent="." index="4"]
+[node name="GameCamera" parent="." index="5"]
 current = false
